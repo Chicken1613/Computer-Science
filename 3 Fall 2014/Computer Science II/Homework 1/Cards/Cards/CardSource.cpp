@@ -13,9 +13,9 @@ struct Card
 	Face face;
 };
 typedef Card Deck[52];
-/*Purpose:Write a function that 
-  Preconditions:
-  Postconditions:
+/*Purpose:Write a function that asks the user to fill out a suit and face for a card.
+  Preconditions:A Card object must exist.
+  Postconditions:A suit and face are filled in.
 */
 void fill_single (Card& card)
 {
@@ -30,9 +30,10 @@ void fill_single (Card& card)
 	card.suit=(Suit)suit;
 	card.face=(Face)face;
 }
-/*Purpose:Write a function that 
-  Preconditions:
-  Postconditions:
+/*Purpose:Write a function that fills all 52 cards in a deck and uses the above data
+  structure.
+  Preconditions:A Card object and a Deck array must exist.
+  Postconditions:All 52 cards' information are filled in for suit and face.
 */
 void fill_all (Deck& deck)
 {
@@ -41,9 +42,9 @@ void fill_all (Deck& deck)
 
 int main ()
 {
-	
-
-
+	Card card;
+	fill_single (card);
+	fill_all (card);
 
 	system ("pause");
 	return 0;
