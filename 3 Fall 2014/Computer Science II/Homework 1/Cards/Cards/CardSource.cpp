@@ -43,7 +43,6 @@ void fill_all (Deck& deck)
 		deck[i].face= (Face)((i%13)+2);
 	}
 }
-
 int main ()
 {
 	Card card;
