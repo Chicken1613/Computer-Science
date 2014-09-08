@@ -37,14 +37,19 @@ void fill_single (Card& card)
 */
 void fill_all (Deck& deck)
 {
-
+	for (int i=0; i<52; ++i)
+	{
+		deck[i].suit= (Suit)(i%4);
+		deck[i].face= (Face)((i%13)+2);
+	}
 }
 
 int main ()
 {
 	Card card;
+	Deck deck;
 	fill_single (card);
-	fill_all (card);
+	fill_all (deck);
 
 	system ("pause");
 	return 0;
